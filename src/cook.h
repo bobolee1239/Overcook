@@ -220,12 +220,12 @@ class cook {
 		/**
 		*	push order to order list 
 		**/
-		void push_order(string& order){
+		void push_order(const string& order){
 			orders.push_back(order);
 		}
 
-		void push_orders(vector<string>& materials){
-			for(vector<string>::iterator itr=materials.begin(); itr!=materials.end(); ++itr){
+		void push_orders(const vector<string>& materials){
+			for(vector<string>::const_iterator itr=materials.begin(); itr!=materials.end(); ++itr){
 				orders.push_back(*itr);
 			}
 		}
