@@ -145,16 +145,16 @@ void* cook_handler(void* overcook_ptr){
 		
 		/* check materials and tools */
 		pthread_mutex_lock(&mutex);
-		materials = overcook->check_n_take(step);
+		materials = overcook->check_n_take(*step);
 		pthread_mutex_unlock(&mutex);
 
 		if(materials.empty()){
 			/* make */
-			string product = overcook->make(step);
+			string product = overcook->make(*step);
 
 			/* return tools and update storage*/
 			pthread_mutex_lock(&mutex);
-			overcook->put_storage_and_return_tools(step);
+			overcook->put_storage_and_return_tools(*step);
 			pthread_mutex_unlock(&mutex);
 		} 
 		else if(materials.back() == "notools"){ continue; } 
