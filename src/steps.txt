@@ -1,0 +1,13 @@
+0,none,none,take,0,tomato
+1,none,none,take,0,onion
+2,none,none,take,0,cabbage
+3,none,none,take,0,meat
+4,none,none,take,0,bread
+5,tomato,knife,slice,2,sliced_tomato
+6,onion,knife,slice,2,sliced_onion
+7,sliced_tomato+sliced_tomato,pot,cook,5,tomato_soup
+8,sliced_onion+sliced_onion,pot,cook,5,onion_soup
+9,meat,knife,slice,2,sliced_meat
+10,cabbage,knife,slice,2,sliced_cabbage
+11,sliced_meat,pot,cook,5,cooked_meat
+12,cooked_meat+sliced_cabbage+bread+sliced_tomato,none,compose,3,burger
